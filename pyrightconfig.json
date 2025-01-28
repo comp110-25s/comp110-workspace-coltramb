@@ -14,4 +14,4 @@
     "reportUnusedExpression": "warning",
     "reportUnusedImport": "warning",
     "pythonVersion": "3.12"
-}
+}"comp110".isalpha()
