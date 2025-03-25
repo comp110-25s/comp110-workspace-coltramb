@@ -1,0 +1,5 @@
+def check_first_letter(word: str, letter: str) -> str:
+    return "match!" if word[0] == letter else "no match!"
+
+
+print(check_first_letter(word="sad", letter="s"))

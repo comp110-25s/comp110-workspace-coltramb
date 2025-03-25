@@ -1,0 +1,27 @@
+SECRET: str = "punk"
+
+def guess_secret(word: str, secret: str, idx: int = 0) -> bool
+    # TODO 1
+
+
+
+
+# TODO 2: If we have more letters to check...
+    # Check to see if the next pair of letters are the same! If not, print "<letter> isn't the secret word's next letter." and return False. Otherwise, print
+   # "<letter> is at the index <the index> for both words! Checking next letters..." and call the function again, moving on to the next letter in each word.
+if idx < len(word):
+
+
+if word[idx] != secret[idx]:
+    print(f"{word[idx]} isn't the secret word's next letter.")
+    return False
+
+else:
+
+    print(f"{word[idx]} is at index [idx] for both words! Checking next letters...")
+
+    return guess_secret(word=word, secret=secret, idx=idx+1)
+
+# TODO 3: If every pair of letters has been the same and there are no letters left to check, print "They are the same word!" and return True.
+    print("They are the same word!")
+    return True
