@@ -33,7 +33,7 @@ def favorite_color(color: dict[str, str]) -> str:
             return color
 
 
-def bin_len(words: list[str]) -> dict[int, str]:
+def bin_len(words: list[str]) -> dict[int, set[str]]:
     """Will return dictionary with string lengths being keys and sets of words that length with be values given a list of strings."""
     dict_length = {}
     for word in words:
