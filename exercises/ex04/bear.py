@@ -4,8 +4,8 @@
 class Bear:
 
     def __init__(self, age: int = 0, hunger_score: int = 5):
-        self.age = 0
-        self.hunger_score = 5
+        self.age = age
+        self.hunger_score = hunger_score
         return None
 
     def one_day(self):

@@ -3,6 +3,10 @@
 from exercises.ex04.fish import Fish
 from exercises.ex04.bear import Bear
 
+"""I am creating a River Simulation."""
+
+__author__ = "730575668"
+
 
 class River:
 
@@ -12,9 +16,9 @@ class River:
         self.fish: list[Fish] = []
         self.bears: list[Bear] = []
         # populate the river with fish and bears
-        for i in range(0, num_fish):
+        for _ in range(0, num_fish):
             self.fish.append(Fish())
-        for i in range(0, num_bears):
+        for _ in range(0, num_bears):
             self.bears.append(Bear())
 
     def check_ages(self):
@@ -53,13 +57,13 @@ class River:
 
     def repopulate_fish(self):
         num_new_fish = (len(self.fish) // 2) * 4
-        for i in range(num_new_fish):
+        for _ in range(num_new_fish):
             self.fish.append(Fish())
         return None
 
     def repopulate_bears(self):
         num_new_bears = len(self.bears) // 2
-        for i in range(num_new_bears):
+        for _ in range(num_new_bears):
             self.bears.append(Bear())
         return None
 
@@ -93,5 +97,5 @@ class River:
         self.view_river()
 
     def one_river_week(self):
-        for i in range(7):
+        for _ in range(7):
             self.one_river_day()
