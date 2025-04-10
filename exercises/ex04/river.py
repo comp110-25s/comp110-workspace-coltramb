@@ -1,9 +1,9 @@
-"""File to define River class."""
+"""File to define River class!"""
 
 __author__ = "730575668"
 
-from exercises.ex04.fish import Fish
-from exercises.ex04.bear import Bear
+from exercises.EX04.fish import Fish
+from exercises.EX04.bear import Bear
 
 
 class River:
@@ -14,7 +14,7 @@ class River:
     bears: list[Bear]
 
     def __init__(self, num_fish: int, num_bears: int):
-        """New River with num_fish Fish and num_bears Bears"""
+        """New River with num_fish Fish and num_bears Bears."""
         self.day: int = 0
         self.fish: list[Fish] = []
         self.bears: list[Bear] = []
@@ -40,10 +40,11 @@ class River:
 
     def bears_eating(self):
         """Result after bears eat on the river."""
-        if len(self.fish) >= 5:
-            self.remove_fish(3)
         for bear in self.bears:
-            bear.eat(3)
+            if len(self.fish) >= 5:
+                self.remove_fish(3)
+                bear.eat(3)
+
         return None
 
     def check_hunger(self):
@@ -111,7 +112,7 @@ class River:
         while i < 7:
             self.one_river_day()
             i += 1
-            return None
+        return None
 
     def remove_fish(self, amount: int):
         """Takes away fish that are eaten from the count."""
